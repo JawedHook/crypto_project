@@ -26,6 +26,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import coinApi from './api/coin.api';
+
 declare var global: {HermesInternal: null | {}};
 
 const App = () => {
