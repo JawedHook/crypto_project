@@ -7,7 +7,7 @@ const MainNavigation: NavigationMaterialBottomTabScreenComponent = createMateria
       screen: HomeScreen,
       navigationOptions: {
         tabBarLabel: 'Accueil',
-        tabBarColor: 'red',
+        tabBarColor: 'blue',
       },
     },
   },
