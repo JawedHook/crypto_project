@@ -21,10 +21,6 @@ export const logout = async (): Promise<void> => {
   await auth.signOut();
 };
 
-export const resetPassword = async (email: string): Promise<void> => {
-  await auth.sendPasswordResetEmail(email);
-};
-
 export const createUserProfileDocument = async (
   userAuth: firebase.User,
   additionalData?: any,
