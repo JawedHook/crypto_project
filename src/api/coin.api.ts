@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
-import apiConf from '../../config/api.config';
+import apiConf from '../../config/api_config';
 
 // Routes
 const baseURL: string = 'https://coinlib.io/api/v1/';
