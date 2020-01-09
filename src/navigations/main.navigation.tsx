@@ -1,4 +1,4 @@
-import HomeScreen from '../screens/Home.screen';
+import HomeScreen from '../screens/home.screen';
 import { createMaterialBottomTabNavigator, NavigationMaterialBottomTabScreenComponent } from 'react-navigation-material-bottom-tabs';
 
 

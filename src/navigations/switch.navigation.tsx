@@ -3,11 +3,11 @@ import createAnimatedSwitchNavigator from 'react-navigation-animated-switch';
 import { Transition } from 'react-native-reanimated';
 
 // Screen
-import LoginScreen from '../screens/Login.screen';
-import LoadingScreen from '../screens/LoadingScreen.screen'
+import LoginScreen from '../screens/login.screen';
+import LoadingScreen from '../screens/loading.screen'
 
 // Navigation
-import MainNavigation from './MainNavigator.navigation';
+import MainNavigation from './main.navigation';
 
 
 

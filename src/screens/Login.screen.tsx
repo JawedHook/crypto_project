@@ -9,11 +9,11 @@ const LoginScreen = ({ navigation }) => {
   return (
     <>
       <Text>Login view</Text>
-      <Button onPress={ () => navigation.navigate('Main')} title="Go to main" />
+      <Button onPress={() => navigation.navigate('Main')} title="Go to main" />
     </>
   );
 
-    
+
 
 };
 

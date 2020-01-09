@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import { createAppContainer, NavigationContainer } from 'react-navigation';
 
-import SwitchNavigator from './navigations/SwitchNavigator.navigation'
+import SwitchNavigator from './navigations/switch.navigation'
 
 const App = () => {
   const AppNavigation: NavigationContainer = createAppContainer(SwitchNavigator)
