@@ -1,5 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
-import apiConf from '../../config/api_config';
+import apiConfig from '../../config/api.config';
 
 // Routes
 const baseURL: string = 'https://coinlib.io/api/v1/';
@@ -30,7 +30,7 @@ const coinApi = {
   getCoins: (): Promise<any> => {
     return instance().get<string>(listUrl, {
       params: {
-        key: apiConf.currencyApiToken,
+        key: apiConfig.currencyApiToken,
         pref: 'EUR',
         order: 'price_desc',
       },
