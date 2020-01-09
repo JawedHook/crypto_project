@@ -26,9 +26,9 @@ const instance = () => {
 };
 
 // API methods
-const coinApi = {
+const coinApiService = {
   getCoins: (): Promise<any> => {
-    return instance().get<string>(listUrl, {
+    return instance().get<string, AxiosRequestConfig>(listUrl, {
       params: {
         key: apiConfig.currencyApiToken,
         pref: 'EUR',
@@ -38,4 +38,4 @@ const coinApi = {
   },
 };
 
-export default coinApi;
+export default coinApiService;
