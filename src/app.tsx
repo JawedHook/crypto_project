@@ -9,24 +9,19 @@
  */
 
 import React from 'react';
-import {
-  StyleSheet
-} from 'react-native';
+import { Provider } from 'react-redux';
 import { createAppContainer, NavigationContainer } from 'react-navigation';
 
-import SwitchNavigation from './navigations/switch.navigation'
+import store from './redux/store';
+import SwitchNavigation from './navigations/switch.navigation';
 
 const App = () => {
-  const AppNavigation: NavigationContainer = createAppContainer(SwitchNavigation)
+  const AppNavigation: NavigationContainer = createAppContainer(SwitchNavigation);
   return (
-    <>
-      <AppNavigation/>
-    </>
+    <Provider store={store}>
+      <AppNavigation />
+    </Provider>
   );
 };
-
-const styles = StyleSheet.create({
-
-});
 
 export default App;

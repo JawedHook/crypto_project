@@ -1,20 +1,12 @@
 import React from 'react';
-import {
-    StyleSheet, Text
-} from 'react-native';
+import { Text, View } from 'react-native';
 
 const LoadingScreen = () => {
-    return (
-        <>
-            <Text>Loading view</Text>
-        </>
-    );
+  return (
+    <View>
+      <Text>Loading view</Text>
+    </View>
+  );
 };
-
-const styles = StyleSheet.create({
-
-});
-
-
 
 export default LoadingScreen;

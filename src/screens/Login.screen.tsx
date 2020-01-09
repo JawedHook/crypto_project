@@ -1,24 +1,16 @@
 import React from 'react';
-import {
-  StyleSheet, Text, Button
-} from 'react-native';
+import { Text, View } from 'react-native';
+import { Button } from '@ant-design/react-native';
 
-import { withNavigation } from 'react-navigation'
+import { withNavigation } from 'react-navigation';
 
-const LoginScreen = ({ navigation }) => {
+const LoginScreen: React.FC<any> = ({ navigation }) => {
   return (
-    <>
+    <View>
       <Text>Login view</Text>
-      <Button onPress={() => navigation.navigate('Main')} title="Go to main" />
-    </>
+      <Button onPress={() => navigation.navigate('Main')}>Go to main</Button>
+    </View>
   );
-
-
-
 };
-
-const styles = StyleSheet.create({
-
-});
 
 export default withNavigation(LoginScreen);

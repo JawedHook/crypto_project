@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  StyleSheet, Text
-} from 'react-native';
+import { Text } from 'react-native';
 
 const HomeScreen = () => {
   return (
@@ -10,9 +8,5 @@ const HomeScreen = () => {
     </>
   );
 };
-
-const styles = StyleSheet.create({
-
-});
 
 export default HomeScreen;
