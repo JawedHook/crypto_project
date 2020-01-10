@@ -4,6 +4,7 @@ import apiConfig from '../../config/api.config';
 // Routes
 const baseURL: string = 'https://coinlib.io/api/v1/';
 const listUrl: string = 'coinlist';
+const coinUrl: string = 'coin';
 
 let apiInstance: AxiosInstance;
 
@@ -36,6 +37,15 @@ const coinApiService = {
       },
     });
   },
+  getCoin: (symbol:string): Promise<any> => {
+    return instance().get<string, AxiosRequestConfig>(coinUrl, {
+      params: {
+        key: apiConfig.currencyApiToken,
+        pref: 'EUR',
+        symbol
+      },
+    });
+  }
 };
 
 export default coinApiService;
