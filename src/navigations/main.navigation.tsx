@@ -6,47 +6,53 @@ import { createMaterialBottomTabNavigator, NavigationMaterialBottomTabScreenComp
 import { createStackNavigator } from 'react-navigation-stack';
 
 const MainNavigation: NavigationMaterialBottomTabScreenComponent = createMaterialBottomTabNavigator(
-    {
-        Coins: createStackNavigator({
-            Coins: {
-                screen: HomeScreen,
-                navigationOptions: {
-                    headerTitle: 'Accueil',
-                    tabBarColor: 'blue',
-                },
-            },
-            Coin: {
-                screen: CoinScreen,
-                navigationOptions: {
-                    headerTitle: 'Saved',
-                    tabBarColor: 'red',
-                },
-            }
-        },{
-            initialRouteName: 'Coins',
-        }),
-        Saved: createStackNavigator({
-            SavedCoin: {
-                screen: SavedCoinScreen,
-                navigationOptions: {
-                    headerTitle: 'Accueil',
-                    tabBarColor: 'blue',
-                },
-            },
-            Coin: {
-                screen: CoinScreen,
-                navigationOptions: {
-                    headerTitle: 'Saved',
-                    tabBarColor: 'red',
-                },
-            }
-        },{
-            initialRouteName: 'SavedCoin',
-        })
-    },
-    {
+  {
+    Coins: createStackNavigator(
+      {
+        Coins: {
+          screen: HomeScreen,
+          navigationOptions: {
+            headerTitle: 'Accueil',
+            tabBarColor: 'blue',
+          },
+        },
+        Coin: {
+          screen: CoinScreen,
+          navigationOptions: {
+            headerTitle: 'Saved',
+            tabBarColor: 'red',
+          },
+        },
+      },
+      {
         initialRouteName: 'Coins',
-    },
+      },
+    ),
+    Saved: createStackNavigator(
+      {
+        SavedCoin: {
+          screen: SavedCoinScreen,
+          navigationOptions: {
+            headerTitle: 'Accueil',
+            tabBarColor: 'blue',
+          },
+        },
+        Coin: {
+          screen: CoinScreen,
+          navigationOptions: {
+            headerTitle: 'Saved',
+            tabBarColor: 'red',
+          },
+        },
+      },
+      {
+        initialRouteName: 'SavedCoin',
+      },
+    ),
+  },
+  {
+    initialRouteName: 'Coins',
+  },
 );
 
 export default MainNavigation;
