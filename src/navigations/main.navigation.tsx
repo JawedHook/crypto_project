@@ -3,7 +3,7 @@ import { createMaterialBottomTabNavigator, NavigationMaterialBottomTabScreenComp
 
 const MainNavigation: NavigationMaterialBottomTabScreenComponent = createMaterialBottomTabNavigator(
   {
-    Home: {
+    home: {
       screen: HomeScreen,
       navigationOptions: {
         tabBarLabel: 'Accueil',
@@ -12,7 +12,7 @@ const MainNavigation: NavigationMaterialBottomTabScreenComponent = createMateria
     },
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'home',
   },
 );
 

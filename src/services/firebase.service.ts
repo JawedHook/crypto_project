@@ -9,20 +9,20 @@ firebase.initializeApp(firebaseConfig);
 export const auth: firebase.auth.Auth = firebase.auth();
 export const firestore: firebase.firestore.Firestore = firebase.firestore();
 
-export const register = async (email: string, password: string): Promise<firebase.auth.UserCredential> => {
-  return await auth.createUserWithEmailAndPassword(email, password);
+export const register = (email: string, password: string): Promise<firebase.auth.UserCredential> => {
+  return auth.createUserWithEmailAndPassword(email, password);
 };
 
-export const login = async (email: string, password: string): Promise<firebase.auth.UserCredential> => {
-  return await auth.signInWithEmailAndPassword(email, password);
+export const login = (email: string, password: string): Promise<firebase.auth.UserCredential> => {
+  return auth.signInWithEmailAndPassword(email, password);
 };
 
-export const logout = async (): Promise<void> => {
-  await auth.signOut();
+export const logout = (): Promise<void> => {
+  return auth.signOut();
 };
 
 export const createUserProfileDocument = async (
-  userAuth: firebase.User,
+  userAuth: firebase.User | null,
   additionalData?: any,
 ): Promise<firebase.firestore.DocumentReference | undefined> => {
   if (!userAuth) {

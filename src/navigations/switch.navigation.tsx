@@ -11,9 +11,9 @@ import MainNavigation from './main.navigation';
 
 export default createAnimatedSwitchNavigator(
   {
-    Main: MainNavigation,
-    Login: LoginScreen,
-    Loading: LoadingScreen,
+    main: MainNavigation,
+    login: LoginScreen,
+    loading: LoadingScreen,
   },
   {
     transition: (
@@ -22,6 +22,6 @@ export default createAnimatedSwitchNavigator(
         <Transition.In type="fade" durationMs={500} />
       </Transition.Together>
     ),
-    initialRouteName: 'Login',
+    initialRouteName: 'loading',
   },
 );
